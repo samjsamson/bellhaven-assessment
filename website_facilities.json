@@ -1,0 +1,274 @@
+[
+  {
+    "name": "Bellhaven of Maplewood",
+    "address": "210 Orchard Lane",
+    "city": "Maplewood",
+    "state": "OH",
+    "zip": "44280",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven of New Carlisle",
+    "address": "875 Elm Street",
+    "city": "New Carlisle",
+    "state": "OH",
+    "zip": "45344",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Wooster",
+    "address": "2301 Cleveland Road",
+    "city": "Wooster",
+    "state": "OH",
+    "zip": "44691",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven Terrace of Akron",
+    "address": "55 Ridgewood Avenue",
+    "city": "Akron",
+    "state": "OH",
+    "zip": "44313",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven of Saline",
+    "address": "980 W Michigan Ave",
+    "city": "Saline",
+    "state": "MI",
+    "zip": "48176",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Goshen",
+    "address": "1610 College Ave",
+    "city": "Goshen",
+    "state": "IN",
+    "zip": "46526",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven of Meadville",
+    "address": "341 Chestnut St",
+    "city": "Meadville",
+    "state": "PA",
+    "zip": "16335",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Defiance",
+    "address": "700 Carpenter Rd",
+    "city": "Defiance",
+    "state": "OH",
+    "zip": "43512",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven Woods of Toledo",
+    "address": "4850 NW Sylvania Ave",
+    "city": "Toledo",
+    "state": "OH",
+    "zip": "43623",
+    "care_offerings": "Memory Support"
+  },
+  {
+    "name": "Bellhaven of Marion",
+    "address": "199 Barks Rd W",
+    "city": "Marion",
+    "state": "OH",
+    "zip": "43302",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Kalamazoo",
+    "address": "3222 Gull Rd",
+    "city": "Kalamazoo",
+    "state": "MI",
+    "zip": "49048",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven Court of Altoona",
+    "address": "1125 Logan Blvd",
+    "city": "Altoona",
+    "state": "PA",
+    "zip": "16602",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven Rehabilitation & Nursing of Grove City",
+    "address": "3985 Broadway",
+    "city": "Grove City",
+    "state": "OH",
+    "zip": "43123",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven at Sycamore Ridge",
+    "address": "7420 Sycamore Ridge Dr",
+    "city": "Miamisburg",
+    "state": "OH",
+    "zip": "45342",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "The Arbors at Bellhaven - Dayton",
+    "address": "2210 Salem Ave",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45406",
+    "care_offerings": "Memory Support"
+  },
+  {
+    "name": "Bellhaven Healthcare Centre of Ashland",
+    "address": "1631 Claremont Ave",
+    "city": "Ashland",
+    "state": "OH",
+    "zip": "44805",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Port Clinton",
+    "address": "1420 Harbor Point Dr",
+    "city": "Port Clinton",
+    "state": "OH",
+    "zip": "43452",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven Shores of Erie",
+    "address": "4930 W Lake Rd",
+    "city": "Erie",
+    "state": "PA",
+    "zip": "16505",
+    "care_offerings": "Assisted Living, Memory Support"
+  },
+  {
+    "name": "Bellhaven of Kettering",
+    "address": "3313 Wilmington Pike",
+    "city": "Kettering",
+    "state": "OH",
+    "zip": "45429",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven Gardens of Monroe",
+    "address": "750 Stewart Rd",
+    "city": "Monroe",
+    "state": "MI",
+    "zip": "48162",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven of Tiffin",
+    "address": "45 St Lawrence Dr",
+    "city": "Tiffin",
+    "state": "OH",
+    "zip": "44883",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Marietta",
+    "address": "805 Colegate Dr",
+    "city": "Marietta",
+    "state": "OH",
+    "zip": "45750",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven Crossings of Lima",
+    "address": "3115 N Cole St",
+    "city": "Lima",
+    "state": "OH",
+    "zip": "45801",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven of Zanesville",
+    "address": "2680 Maple Ave",
+    "city": "Zanesville",
+    "state": "OH",
+    "zip": "43701",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Chagrin Falls",
+    "address": "150 River St",
+    "city": "Chagrin Falls",
+    "state": "OH",
+    "zip": "44022",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven Willow Creek",
+    "address": "8060 Willow Creek Ln",
+    "city": "Portage",
+    "state": "MI",
+    "zip": "49024",
+    "care_offerings": "Memory Support"
+  },
+  {
+    "name": "Bellhaven of Ashtabula",
+    "address": "3156 W Prospect Rd",
+    "city": "Ashtabula",
+    "state": "OH",
+    "zip": "44004",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Owosso",
+    "address": "1120 W Main St",
+    "city": "Owosso",
+    "state": "MI",
+    "zip": "48867",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven of Portsmouth",
+    "address": "2222 Gallia St",
+    "city": "Portsmouth",
+    "state": "OH",
+    "zip": "45662",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven of Batavia",
+    "address": "2000 Hospital Dr",
+    "city": "Batavia",
+    "state": "OH",
+    "zip": "45103",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Bellhaven at Union Square",
+    "address": "118 Union Square Dr",
+    "city": "New Albany",
+    "state": "OH",
+    "zip": "43054",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven of Carlisle",
+    "address": "640 Walnut Bottom Rd",
+    "city": "Carlisle",
+    "state": "PA",
+    "zip": "17015",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  },
+  {
+    "name": "Amberly Manor",
+    "address": "4390 Darrow Rd",
+    "city": "Hudson",
+    "state": "OH",
+    "zip": "44236",
+    "care_offerings": "Assisted Living"
+  },
+  {
+    "name": "Bellhaven of Chesterton",
+    "address": "1250 NW Franklin Street",
+    "city": "Chesterton",
+    "state": "IN",
+    "zip": "46304",
+    "care_offerings": "Short-Term Rehabilitation & Nursing"
+  }
+]
