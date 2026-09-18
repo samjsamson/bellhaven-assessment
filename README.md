@@ -30,169 +30,189 @@ bellhaven-assessment/
 ├── decisions.json
 ├── requirements.txt
 └── README.md
+```
 
-Matching Approach
+## Matching Approach
 
 The matching logic combines several signals:
 
-City match
-State match
-ZIP match
-Fuzzy facility-name similarity
-Normalized addresses
+- City match
+- State match
+- ZIP match
+- Fuzzy facility-name similarity
+- Normalized addresses
 
 Names and addresses are normalized before comparison so differences such as:
 
-Road vs Rd
-Avenue vs Ave
-& vs and
+- `Road` vs `Rd`
+- `Avenue` vs `Ave`
+- `&` vs `and`
 
 do not automatically create false mismatches.
 
 Each website facility is classified into an action such as:
 
-CREATE
-UPDATE_FIELD
-REPARENT
-CHOW
-MARK_DUPLICATE
-MARK_NEEDS_REVIEW
-CHOW Handling
+- `CREATE`
+- `UPDATE_FIELD`
+- `REPARENT`
+- `CHOW`
+- `MARK_DUPLICATE`
+- `MARK_NEEDS_REVIEW`
+
+## CHOW Handling
 
 The pipeline follows the required change-of-ownership SOP.
 
 If an account has both:
 
-lifetime revenue greater than zero
-outstanding AR greater than zero
+- lifetime revenue greater than zero
+- outstanding AR greater than zero
 
 the existing account is preserved.
 
 Instead of changing its parent:
 
-A new facility account is created under the correct parent.
-The old account remains unchanged.
-chow_current_account on the old account is set to the new account ID.
+1. A new facility account is created under the correct parent.
+2. The old account remains unchanged.
+3. `chow_current_account` on the old account is set to the new account ID.
 
-The CHOW workflow is also retry-safe. If the old account already has a chow_current_account, another new account is not created.
+The CHOW workflow is also retry-safe. If the old account already has a `chow_current_account`, another new account is not created.
 
-Duplicate Handling
+## Duplicate Handling
 
 Likely duplicates are identified using facility name, city, state, ZIP, and address information.
 
 For confirmed duplicates:
 
-the losing record is marked Inactive
-duplicate_of_account points to the surviving CRM account
+- the losing record is marked `Inactive`
+- `duplicate_of_account` points to the surviving CRM account
 
 Historical CHOW accounts are excluded from duplicate detection because both records are intentionally preserved.
 
-Review App
+## Review App
 
 The review app is built with Streamlit.
 
 Each proposed change displays:
 
-reason for the proposal
-current CRM data
-website evidence
-proposed CRM values
-Approve / Reject controls
+- reason for the proposal
+- current CRM data
+- website evidence
+- proposed CRM values
+- Approve / Reject controls
 
 Nothing writes to the CRM until approved.
 
 The app also supports approving all remaining reviewed proposals in one batch.
 
-Idempotency
+## Idempotency
 
 The pipeline is designed to be safe on repeated runs.
 
 It avoids re-proposing:
 
-previously approved or rejected proposals
-completed CHOW records
-resolved duplicates
-accounts already marked Needs Review
+- previously approved or rejected proposals
+- completed CHOW records
+- resolved duplicates
+- accounts already marked `Needs Review`
 
 After completing the assessment corrections, I re-fetched the CRM and reran the reconciliation pipeline.
 
 Final result:
 
+```text
 Total CRM accounts: 41
 Total proposals: 0
+```
 
 This means the pipeline found no additional unresolved changes on the next run.
 
-Running Locally
+## Running Locally
 
 Install dependencies:
 
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
 Set the CRM token as an environment variable:
 
+```bash
 export CRM_TOKEN="YOUR_TOKEN"
+```
 
 Scrape the website:
 
+```bash
 python3 scrape.py
+```
 
 Fetch CRM data:
 
+```bash
 python3 fetch_crm.py
+```
 
 Generate proposals:
 
+```bash
 python3 compare.py
+```
 
 Start the review app:
 
+```bash
 python3 -m streamlit run review_app.py
-Daily Schedule
+```
 
-.github/workflows/daily.yml contains an example GitHub Actions workflow that:
+## Daily Schedule
 
-installs dependencies
-scrapes the Bellhaven website
-fetches CRM accounts
-runs the reconciliation logic
+`.github/workflows/daily.yml` contains an example GitHub Actions workflow that:
+
+1. installs dependencies
+2. scrapes the Bellhaven website
+3. fetches CRM accounts
+4. runs the reconciliation logic
 
 The CRM token is expected to be stored as a GitHub Actions secret named:
 
+```text
 CRM_TOKEN
+```
 
 No credentials are committed to the repository.
 
-AI Usage
+## AI Usage
 
 I used ChatGPT as a development partner throughout the exercise.
 
 AI helped with:
 
-understanding the assessment requirements
-designing the reconciliation workflow
-writing and debugging Python
-developing matching logic
-identifying edge cases
-implementing the Streamlit review UI
-interpreting the CHOW SOP
-debugging API interactions
+- understanding the assessment requirements
+- designing the reconciliation workflow
+- writing and debugging Python
+- developing matching logic
+- identifying edge cases
+- implementing the Streamlit review UI
+- interpreting the CHOW SOP
+- debugging API interactions
 
-I validated the generated logic by inspecting the source data, testing individual API operations, and re-running the reconciliation against the updated CRM.
+I validated the generated logic by inspecting the source data, testing individual API operations, and rerunning the reconciliation against the updated CRM.
 
-What I Would Build Next
+## What I Would Build Next
 
 With more time, I would add:
 
-automated tests for matching and CHOW behavior
-stronger address normalization
-explicit confidence scores in the review UI
-structured logging
-a persistent database for proposal history
-better handling of partial failures in multi-step operations
-alerting when daily runs produce unusually large changes
-Time Spent
+- automated tests for matching and CHOW behavior
+- stronger address normalization
+- explicit confidence scores in the review UI
+- structured logging
+- a persistent database for proposal history
+- better handling of partial failures in multi-step operations
+- alerting when daily runs produce unusually large changes
 
-Actual time spent: 2.5 hours
+## Time Spent
+
+Actual time spent: **2.5 hours**
